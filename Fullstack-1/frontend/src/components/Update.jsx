@@ -19,7 +19,6 @@ function Update({ messages, onUpdate }) {
       await axios.put(`http://localhost:8000/update/${id}`, { message: updatedText });
       onUpdate('');
       navigate('/');
-      window.location.reload();
 
     } catch (error) {
       console.error(error);
